@@ -1,0 +1,162 @@
+{
+  "cli": {
+    "version": ">= 18.11.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "channel": "development",
+      "developmentClient": true,
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "credentialsSource": "remote",
+      "node": "20.18.0",
+      "env": {
+        "APP_NAME": "School App (Dev)",
+        "SLUG": "school-management-system",
+        "APP_ICON": "./assets/images/icon.png",
+        "SPLASH_IMAGE": "./assets/images/splash-icon.png",
+        "PRIMARY_COLOR": "#0A84FF",
+        "SECONDARY_COLOR": "#00C7BE",
+        "BACKGROUND_COLOR": "#F5F7FA",
+        "TEXT_COLOR": "#1D1D1F",
+        "PACKAGE_NAME": "com.mrisse.schoolmanagementsystem",
+        "BUNDLE_ID": "com.mrisse.schoolmanagementsystem",
+        "TENANT_ID": "default",
+        "API_URL": "https://schoolmangementbackend-deployment.up.railway.app/api"
+      }
+    },
+    "preview": {
+      "channel": "preview",
+      "distribution": "internal",
+      "credentialsSource": "remote",
+      "node": "20.18.0",
+      "env": {
+        "APP_NAME": "School App (Preview)",
+        "SLUG": "school-management-system",
+        "APP_ICON": "./assets/images/icon.png",
+        "SPLASH_IMAGE": "./assets/images/splash-icon.png",
+        "PRIMARY_COLOR": "#0A84FF",
+        "SECONDARY_COLOR": "#00C7BE",
+        "BACKGROUND_COLOR": "#F5F7FA",
+        "TEXT_COLOR": "#1D1D1F",
+        "PACKAGE_NAME": "com.mrisse.schoolmanagementsystem",
+        "BUNDLE_ID": "com.mrisse.schoolmanagementsystem",
+        "TENANT_ID": "default",
+        "API_URL": "https://schoolmangementbackend-deployment.up.railway.app/api",
+        "EAS_PROJECT_ID": "c80d67d5-04f9-4dd8-8b5b-91370d9648de"
+      },
+      "android": {
+        "image": "ubuntu-22.04-jdk-17-ndk-r26b",
+        "buildType": "apk"
+      }
+    },
+    "production": {
+      "channel": "production",
+      "credentialsSource": "remote",
+      "distribution": "store",
+      "autoIncrement": true,
+      "node": "20.18.0",
+      "env": {
+        "NPM_FLAGS": "--legacy-peer-deps",
+        "NPM_CONFIG_LEGACY_PEER_DEPS": "true",
+        "APP_NAME": "School Management System",
+        "SLUG": "school-management-system",
+        "APP_ICON": "./assets/images/icon.png",
+        "SPLASH_IMAGE": "./assets/images/splash-icon.png",
+        "PRIMARY_COLOR": "#0A84FF",
+        "SECONDARY_COLOR": "#00C7BE",
+        "BACKGROUND_COLOR": "#F5F7FA",
+        "TEXT_COLOR": "#1D1D1F",
+        "PACKAGE_NAME": "com.mrisse.schoolmanagementsystem",
+        "BUNDLE_ID": "com.mrisse.schoolmanagementsystem",
+        "TENANT_ID": "default",
+        "API_URL": "https://schoolmangementbackend-deployment.up.railway.app/api",
+        "EAS_PROJECT_ID": "0fe54b94-2a81-41bd-9375-ffa0b9081175"
+      },
+      "android": {
+        "image": "ubuntu-22.04-jdk-17-ndk-r26b",
+        "buildType": "apk"
+      }
+    },
+    "hamar": {
+      "channel": "production",
+      "credentialsSource": "remote",
+      "distribution": "store",
+      "autoIncrement": true,
+      "node": "20.18.0",
+      "env": {
+        "NPM_FLAGS": "--legacy-peer-deps",
+        "NPM_CONFIG_LEGACY_PEER_DEPS": "true",
+        "APP_NAME": "Hamar Boarding School",
+        "SLUG": "school-management-system",
+        "APP_ICON": "./assets/hamar/hoyga-Xamar.png",
+        "SPLASH_IMAGE": "./assets/hamar/hoyga-xamar.jpg",
+        "PRIMARY_COLOR": "#0A84FF",
+        "SECONDARY_COLOR": "#00C7BE",
+        "BACKGROUND_COLOR": "#F5F7FA",
+        "TEXT_COLOR": "#1D1D1F",
+        "PACKAGE_NAME": "com.mrisse.schoolmanagementsystem",
+        "BUNDLE_ID": "com.mrisse.schoolmanagementsystem",
+        "TENANT_ID": "hamar-boarding",
+        "API_URL": "https://schoolmangementbackend-deployment.up.railway.app/api",
+        "EAS_PROJECT_ID": "0fe54b94-2a81-41bd-9375-ffa0b9081175"
+      },
+      "android": {
+        "image": "ubuntu-22.04-jdk-17-ndk-r26b",
+        "buildType": "apk"
+      }
+    },
+    "hamar-jajab": {
+      "channel": "production",
+      "credentialsSource": "remote",
+      "distribution": "store",
+      "autoIncrement": true,
+      "node": "20.18.0",
+      "env": {
+        "NPM_FLAGS": "--legacy-peer-deps",
+        "NPM_CONFIG_LEGACY_PEER_DEPS": "true",
+        "ENVFILE": ".env.hamar-jajab",
+        "APP_NAME": "Hamar Jajab",
+        "SLUG": "school-management-system",
+        "APP_ICON": "./assets/images/icon.png",
+        "SPLASH_IMAGE": "./assets/images/splash-icon.png",
+        "PRIMARY_COLOR": "#FF6600",
+        "SECONDARY_COLOR": "#FF9933",
+        "BACKGROUND_COLOR": "#FFFFFF",
+        "TEXT_COLOR": "#333333",
+        "PACKAGE_NAME": "com.hamarjajab.app",
+        "BUNDLE_ID": "com.hamarjajab.app",
+        "TENANT_ID": "hamar-jajab",
+        "API_URL": "https://schoolmangementbackend-deployment.up.railway.app/api",
+        "EAS_PROJECT_ID": "0fe54b94-2a81-41bd-9375-ffa0b9081175"
+      },
+      "android": {
+        "image": "ubuntu-22.04-jdk-17-ndk-r26b",
+        "buildType": "apk"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "android": {
+        "serviceAccountKeyPath": "./google-service-account.json",
+        "track": "internal"
+      }
+    },
+    "hamar": {
+      "android": {
+        "serviceAccountKeyPath": "./google-service-account.json",
+        "track": "internal"
+      }
+    },
+    "hamar-jajab": {
+      "android": {
+        "serviceAccountKeyPath": "./google-service-account.json",
+        "track": "internal"
+      }
+    }
+  }
+}
